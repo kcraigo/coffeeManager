@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <button mat-button class="sidenav-toggle" (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span>Coffee Manager</span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-spacer"></span>
+
+  <nav class="currentUser">
+    <label>Welcome! {{ curLogin }}</label>
+
+  </nav>
+  &nbsp;
+  <span>
+    <button mat-flat-button *ngIf="!isAuthenticated" (click)="signIn()" color="white">Login</button>
+    <button mat-flat-button *ngIf="isAuthenticated" (click)="signOut()" color="white">Logout</button>
+  </span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="toggleTheme.emit()">Toggle Theme</button>
+  </mat-menu>
+</mat-toolbar>

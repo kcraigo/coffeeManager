@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Raleway, "Helvetica Neue", sans-serif; }
+
+.success.mat-snack-bar-container {
+  background-color: rgba(132,189,0, .93); // #84BD00;
+  color:white;
+}
+
+.error.mat-snack-bar-container {
+  background-color: rgba(210,38,48, .93); //#D22630
+  color:white;
+}
+
+.warn.mat-snack-bar-container {
+  background-color: rgba(232,119,34, .93); //#E87722
+  color:white;
+}
+
+.info.mat-snack-bar-container {
+  background-color: rgba(0,181,226, .93); //#00B5E2
+  color:white;
+}
+
+.logo {
+  position: relative;
+  left: 0px;
+  background-color: white;
+  border: solid;
+  border-color: gainsboro;
+  border-width: 0 0 .1px 0;
+}
+

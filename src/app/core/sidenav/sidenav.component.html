@@ -1,0 +1,42 @@
+<mat-sidenav-container
+  class="app-sidenav-container"
+  [class.dark-theme]="isDarkTheme">
+  <mat-sidenav
+    #sidenav
+    class="app-sidenav mat-elevation-z10"
+    [opened]="!isScreenSmall"
+    [mode]="isScreenSmall ? 'over' : 'side'"
+  >
+    <mat-toolbar class="logo"><span><img src="../../../assets/logo.png" width="172px" height="51px"/></span></mat-toolbar>
+    <mat-list role="list">
+      <mat-list-item class="app-sidenav-navitem" role="listitem"><button mat-icon-button [routerLink]="['/home']" aria-label="Incident Reports">
+        <mat-icon>house</mat-icon> Home
+      </button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-icon-button [routerLink]="['/brands']" aria-label="Brands">
+        <mat-icon>local_cafe</mat-icon> Brands
+      </button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-icon-button [routerLink]="['/countries']" aria-label="Countries">
+        <mat-icon>flag</mat-icon> Countries
+      </button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-icon-button [routerLink]="['/apparel']" aria-label="Apparel">
+        <mat-icon>shopping_bag</mat-icon> Apparel
+      </button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-icon-button [routerLink]="['/giftcards']" aria-label="Gifts">
+        <mat-icon>card_giftcard</mat-icon> Gift Cards
+      </button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-icon-button [routerLink]="['/about']" aria-label="About Coffee Manager">
+        <mat-icon>topic</mat-icon> About
+      </button></mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <div class="app-sidenav-content">
+    <app-toolbar
+      (toggleTheme)="toggleTheme()"
+      (toggleSidenav)="sidenav.toggle()"
+    ></app-toolbar>
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>

@@ -1,0 +1,34 @@
+
+$iconWidth: 56px;
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.currentUser {
+  font-size: small;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sidenav-toggle {
+  display: none;
+
+  padding: 0;
+  margin: 8px;
+  min-width: $iconWidth;
+
+  @media (max-width: 720px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+mat-icon {
+  font-size: 30px;
+  height: $iconWidth;
+  width: $iconWidth;
+  line-height: $iconWidth;
+  color: white;
+}
