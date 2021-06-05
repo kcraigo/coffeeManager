@@ -1,5 +1,9 @@
 # CoffeeManager
 
+## PLEASE NOTE! This Project is currently on hold
+There are some issues with the Microsoft Login piece of this code that still needs
+to be resolved
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 
 ## Development server
